@@ -9,6 +9,7 @@ Analysis: DFT, Color Spaces, Noise, Statistics
 """
 
 import os, cv2, numpy as np, base64, io, zipfile, tempfile
+# pyrefly: ignore [missing-import]
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from flask_cors import CORS
 

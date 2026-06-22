@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelForge | Advanced Image Processing</title>
-    <meta name="description" content="Advanced Digital Image Processing platform with Enhancement, Segmentation, and Analysis tools.">
+    <meta name="description"
+        content="Advanced Digital Image Processing platform with Enhancement, Segmentation, and Analysis tools.">
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style.css?v=11">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=12">
 </head>
+
 <body>
     <!-- Interactive Background -->
     <div id="particles-js"></div>
@@ -17,7 +23,24 @@
 
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <div class="nav-brand"><div class="brand-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><span class="brand-text">PixelForge<span class="brand-dot">.</span></span></div>
+        <div class="nav-brand">
+            <div class="brand-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff" />
+                            <stop offset="100%" stop-color="#7c5cfc" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="12" cy="12" r="10" stroke="url(#brandGrad)" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94"
+                        stroke="url(#brandGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <span class="brand-text">PixelForge<span class="brand-dot">.</span></span>
+        </div>
         <div class="nav-links" id="navLinks">
             <a href="#hero" class="nav-link active" data-target="hero">Home</a>
             <a href="#upload" class="nav-link" data-target="upload">Upload</a>
@@ -31,31 +54,53 @@
     <section class="hero" id="hero">
         <div class="hero-content">
             <div class="hero-tag reveal"><span class="tag-pulse"></span>Advanced Image Processing Platform</div>
-            <h1 class="hero-title reveal d1">Transform Images<br><span class="glow-text">With AI-Powered Processing</span></h1>
-            <p class="hero-sub reveal d2">Upload any image and watch real-time enhancement, segmentation, frequency analysis, noise simulation, and color space decomposition — all powered by OpenCV.</p>
+            <h1 class="hero-title reveal d1">Transform Images<br><span class="glow-text">With AI-Powered
+                    Processing</span></h1>
+            <p class="hero-sub reveal d2">Upload any image and watch real-time enhancement, segmentation, frequency
+                analysis, noise simulation, and color space decomposition — all powered by OpenCV.</p>
             <div class="hero-btns reveal d3">
-                <button class="btn btn-glow" onclick="window.scrollTo_('#upload')"><span>Get Started</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+                <button class="btn btn-glow" onclick="window.scrollTo_('#upload')"><span>Get Started</span><svg
+                        width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                    </svg></button>
                 <button class="btn btn-outline" onclick="window.scrollTo_('#results')">View Features</button>
             </div>
             <div class="hero-stats reveal d4">
-                <div class="stat"><span class="stat-num" data-n="4">0</span><span class="stat-lbl">Enhancement</span></div>
+                <div class="stat"><span class="stat-num" data-n="4">0</span><span class="stat-lbl">Enhancement</span>
+                </div>
                 <div class="stat-sep"></div>
-                <div class="stat"><span class="stat-num" data-n="4">0</span><span class="stat-lbl">Segmentation</span></div>
+                <div class="stat"><span class="stat-num" data-n="4">0</span><span class="stat-lbl">Segmentation</span>
+                </div>
                 <div class="stat-sep"></div>
-                <div class="stat"><span class="stat-num" data-n="9">0</span><span class="stat-lbl">Color Channels</span></div>
+                <div class="stat"><span class="stat-num" data-n="9">0</span><span class="stat-lbl">Color Channels</span>
+                </div>
                 <div class="stat-sep"></div>
-                <div class="stat"><span class="stat-num" data-n="15">0</span><span class="stat-lbl">Total Outputs</span></div>
+                <div class="stat"><span class="stat-num" data-n="15">0</span><span class="stat-lbl">Total Outputs</span>
+                </div>
             </div>
         </div>
         <div class="hero-viz reveal d2">
             <div class="viz-card">
                 <div class="viz-grid">
-                    <div class="viz-cell" style="--i:0"><div class="viz-icon">🖼️</div><span>Original</span></div>
-                    <div class="viz-cell" style="--i:1"><div class="viz-icon">✨</div><span>Enhanced</span></div>
-                    <div class="viz-cell" style="--i:2"><div class="viz-icon">🔍</div><span>Segmented</span></div>
-                    <div class="viz-cell" style="--i:3"><div class="viz-icon">📊</div><span>DFT</span></div>
-                    <div class="viz-cell" style="--i:4"><div class="viz-icon">🎨</div><span>Colors</span></div>
-                    <div class="viz-cell" style="--i:5"><div class="viz-icon">🔊</div><span>Noise</span></div>
+                    <div class="viz-cell" style="--i:0">
+                        <div class="viz-icon">🖼️</div><span>Original</span>
+                    </div>
+                    <div class="viz-cell" style="--i:1">
+                        <div class="viz-icon">✨</div><span>Enhanced</span>
+                    </div>
+                    <div class="viz-cell" style="--i:2">
+                        <div class="viz-icon">🔍</div><span>Segmented</span>
+                    </div>
+                    <div class="viz-cell" style="--i:3">
+                        <div class="viz-icon">📊</div><span>DFT</span>
+                    </div>
+                    <div class="viz-cell" style="--i:4">
+                        <div class="viz-icon">🎨</div><span>Colors</span>
+                    </div>
+                    <div class="viz-cell" style="--i:5">
+                        <div class="viz-icon">🔊</div><span>Noise</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,10 +108,20 @@
 
     <!-- Upload -->
     <section class="section" id="upload">
-        <div class="sec-head"><span class="sec-tag">Step 01</span><h2 class="sec-title">Upload Your Image</h2><p class="sec-sub">Drag & drop or click to select — supports JPG, PNG, BMP, TIFF</p></div>
+        <div class="sec-head"><span class="sec-tag">Step 01</span>
+            <h2 class="sec-title">Upload Your Image</h2>
+            <p class="sec-sub">Drag & drop or click to select — supports JPG, PNG, BMP, TIFF</p>
+        </div>
         <div class="drop-zone" id="dropZone">
             <div class="drop-inner">
-                <div class="drop-icon-wrap"><div class="drop-pulse"></div><svg class="drop-icon" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+                <div class="drop-icon-wrap">
+                    <div class="drop-pulse"></div><svg class="drop-icon" width="44" height="44" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                </div>
                 <h3>Drop your image here</h3>
                 <p>or <span class="link-accent">browse files</span></p>
             </div>
@@ -75,7 +130,8 @@
         <div class="preview hidden" id="preview">
             <div class="preview-img-wrap"><img id="previewImg" alt="Preview"></div>
             <div class="preview-info">
-                <div><span class="preview-name" id="previewName"></span><span class="preview-meta" id="previewMeta"></span></div>
+                <div><span class="preview-name" id="previewName"></span><span class="preview-meta"
+                        id="previewMeta"></span></div>
                 <div class="preview-btns">
                     <button class="btn btn-sm btn-danger" id="btnRemove">✕ Remove</button>
                     <button class="btn btn-sm btn-glow" id="btnProcess">▶ Process Image</button>
@@ -97,87 +153,223 @@
 
         <!-- Tab: Original -->
         <div class="tab-content active" id="tab-original">
-            <div class="sec-head"><h2 class="sec-title">Original Image</h2></div>
+            <div class="sec-head">
+                <h2 class="sec-title">Original Image</h2>
+            </div>
             <div class="grid g2">
-                <div class="card"><div class="card-head"><span class="badge b-blue">Color</span><span>Original RGB</span></div><div class="card-body"><img id="imgOrgColor" alt="Original"></div></div>
-                <div class="card"><div class="card-head"><span class="badge b-gray">Grayscale</span><span>Grayscale</span></div><div class="card-body"><img id="imgOrgGray" alt="Grayscale"></div></div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-blue">Color</span><span>Original RGB</span></div>
+                    <div class="card-body"><img id="imgOrgColor" alt="Original"></div>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-gray">Grayscale</span><span>Grayscale</span></div>
+                    <div class="card-body"><img id="imgOrgGray" alt="Grayscale"></div>
+                </div>
             </div>
             <!-- Stats Dashboard -->
             <div class="stats-dash" id="statsDash">
                 <h3 class="dash-title">📈 Image Statistics</h3>
                 <div class="stats-grid">
-                    <div class="stat-card"><span class="sc-label">Mean</span><span class="sc-val" id="sMean">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Std Dev</span><span class="sc-val" id="sStd">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Min</span><span class="sc-val" id="sMin">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Max</span><span class="sc-val" id="sMax">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Median</span><span class="sc-val" id="sMedian">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Entropy</span><span class="sc-val" id="sEntropy">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Pixels</span><span class="sc-val" id="sPixels">-</span></div>
-                    <div class="stat-card"><span class="sc-label">Dimensions</span><span class="sc-val" id="sDims">-</span></div>
+                    <div class="stat-card"><span class="sc-label">Mean</span><span class="sc-val" id="sMean">-</span>
+                    </div>
+                    <div class="stat-card"><span class="sc-label">Std Dev</span><span class="sc-val" id="sStd">-</span>
+                    </div>
+                    <div class="stat-card"><span class="sc-label">Min</span><span class="sc-val" id="sMin">-</span>
+                    </div>
+                    <div class="stat-card"><span class="sc-label">Max</span><span class="sc-val" id="sMax">-</span>
+                    </div>
+                    <div class="stat-card"><span class="sc-label">Median</span><span class="sc-val"
+                            id="sMedian">-</span></div>
+                    <div class="stat-card"><span class="sc-label">Entropy</span><span class="sc-val"
+                            id="sEntropy">-</span></div>
+                    <div class="stat-card"><span class="sc-label">Pixels</span><span class="sc-val"
+                            id="sPixels">-</span></div>
+                    <div class="stat-card"><span class="sc-label">Dimensions</span><span class="sc-val"
+                            id="sDims">-</span></div>
                 </div>
             </div>
             <!-- DFT -->
             <div class="grid g2" style="margin-top:32px">
-                <div class="card"><div class="card-head"><span class="badge b-purple">DFT</span><span>Magnitude Spectrum</span></div><div class="card-body"><img id="imgDFT" alt="DFT"></div><div class="card-foot"><code>np.fft.fft2() + fftshift()</code><p>Frequency domain representation showing spatial frequency distribution.</p></div></div>
-                <div class="card"><div class="card-head"><span class="badge b-blue">Histogram</span><span>Intensity Distribution</span></div><div class="card-body hist-body"><canvas id="histMain" width="400" height="200"></canvas></div></div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-purple">DFT</span><span>Magnitude Spectrum</span></div>
+                    <div class="card-body"><img id="imgDFT" alt="DFT"></div>
+                    <div class="card-foot"><code>np.fft.fft2() + fftshift()</code>
+                        <p>Frequency domain representation showing spatial frequency distribution.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-blue">Histogram</span><span>Intensity
+                            Distribution</span></div>
+                    <div class="card-body hist-body"><canvas id="histMain" width="400" height="200"></canvas></div>
+                </div>
             </div>
         </div>
 
         <!-- Tab: Enhancement -->
         <div class="tab-content" id="tab-enhancement">
-            <div class="sec-head"><h2 class="sec-title">Enhanced Images</h2><p class="sec-sub">Four enhancement techniques applied to improve image quality</p></div>
+            <div class="sec-head">
+                <h2 class="sec-title">Enhanced Images</h2>
+                <p class="sec-sub">Four enhancement techniques applied to improve image quality</p>
+            </div>
             <div class="grid g2" id="enhanceGrid"></div>
             <div class="hist-compare" style="margin-top:32px">
                 <h3 style="text-align:center;margin-bottom:20px;font-size:1.1rem">Histogram Comparison</h3>
                 <div class="grid g3">
-                    <div class="card mini"><div class="card-head"><span class="badge b-gray">Original</span></div><div class="card-body hist-body"><canvas id="hOrg" width="300" height="130"></canvas></div></div>
-                    <div class="card mini"><div class="card-head"><span class="badge b-purple">Hist. Eq</span></div><div class="card-body hist-body"><canvas id="hEq" width="300" height="130"></canvas></div></div>
-                    <div class="card mini"><div class="card-head"><span class="badge b-cyan">CLAHE</span></div><div class="card-body hist-body"><canvas id="hClahe" width="300" height="130"></canvas></div></div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-gray">Original</span></div>
+                        <div class="card-body hist-body"><canvas id="hOrg" width="300" height="130"></canvas></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-purple">Hist. Eq</span></div>
+                        <div class="card-body hist-body"><canvas id="hEq" width="300" height="130"></canvas></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-cyan">CLAHE</span></div>
+                        <div class="card-body hist-body"><canvas id="hClahe" width="300" height="130"></canvas></div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Tab: Segmentation -->
         <div class="tab-content" id="tab-segmentation">
-            <div class="sec-head"><h2 class="sec-title">Segmented Images</h2><p class="sec-sub">Four segmentation techniques to extract meaningful regions</p></div>
+            <div class="sec-head">
+                <h2 class="sec-title">Segmented Images</h2>
+                <p class="sec-sub">Four segmentation techniques to extract meaningful regions</p>
+            </div>
             <div class="grid g2" id="segGrid"></div>
-            <div class="card" style="margin-top:24px" id="contourCard"><div class="card-head"><span class="badge b-green">Overlay</span><span>Detected Contours on Original</span></div><div class="card-body"><img id="imgContours" alt="Contours"></div></div>
+            <div class="card" style="margin-top:24px" id="contourCard">
+                <div class="card-head"><span class="badge b-green">Overlay</span><span>Detected Contours on
+                        Original</span></div>
+                <div class="card-body"><img id="imgContours" alt="Contours"></div>
+            </div>
         </div>
 
         <!-- Tab: Noise -->
         <div class="tab-content" id="tab-noise">
-            <div class="sec-head"><h2 class="sec-title">Noise Simulation & Removal</h2><p class="sec-sub">Adding and removing noise using techniques from Lab 6</p></div>
+            <div class="sec-head">
+                <h2 class="sec-title">Noise Simulation & Removal</h2>
+                <p class="sec-sub">Adding and removing noise using techniques from Lab 6</p>
+            </div>
             <div class="grid g2" id="noiseGrid">
-                <div class="card"><div class="card-head"><span class="badge b-red">Noisy</span><span>Gaussian Noise (σ=40)</span></div><div class="card-body"><img id="imgNoiseG" alt="Gaussian Noise"></div></div>
-                <div class="card"><div class="card-head"><span class="badge b-red">Noisy</span><span>Salt & Pepper Noise</span></div><div class="card-body"><img id="imgNoiseSP" alt="Salt Pepper"></div></div>
-                <div class="card"><div class="card-head"><span class="badge b-green">Denoised</span><span>Gaussian Blur Filter</span></div><div class="card-body"><img id="imgDenG" alt="Denoised Gaussian"></div><div class="card-foot"><code>cv2.GaussianBlur()</code><p>Smooths image by convolving with Gaussian kernel.</p></div></div>
-                <div class="card"><div class="card-head"><span class="badge b-green">Denoised</span><span>Median Filter</span></div><div class="card-body"><img id="imgDenM" alt="Denoised Median"></div><div class="card-foot"><code>cv2.medianBlur()</code><p>Non-linear filter excellent for salt & pepper noise removal.</p></div></div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-red">Noisy</span><span>Gaussian Noise (σ=40)</span>
+                    </div>
+                    <div class="card-body"><img id="imgNoiseG" alt="Gaussian Noise"></div>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-red">Noisy</span><span>Salt & Pepper Noise</span></div>
+                    <div class="card-body"><img id="imgNoiseSP" alt="Salt Pepper"></div>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-green">Denoised</span><span>Gaussian Blur Filter</span>
+                    </div>
+                    <div class="card-body"><img id="imgDenG" alt="Denoised Gaussian"></div>
+                    <div class="card-foot"><code>cv2.GaussianBlur()</code>
+                        <p>Smooths image by convolving with Gaussian kernel.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="badge b-green">Denoised</span><span>Median Filter</span></div>
+                    <div class="card-body"><img id="imgDenM" alt="Denoised Median"></div>
+                    <div class="card-foot"><code>cv2.medianBlur()</code>
+                        <p>Non-linear filter excellent for salt & pepper noise removal.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Tab: Colors -->
         <div class="tab-content" id="tab-colors">
-            <div class="sec-head"><h2 class="sec-title">Color Space Decomposition</h2><p class="sec-sub">RGB, HSV, and LAB channel visualization from Lab 2</p></div>
-            <div class="color-group"><h3 class="cg-title">RGB Channels</h3><div class="grid g3"><div class="card mini"><div class="card-head"><span class="badge b-red">R</span><span>Red</span></div><div class="card-body"><img id="chR" alt="R"></div></div><div class="card mini"><div class="card-head"><span class="badge b-green">G</span><span>Green</span></div><div class="card-body"><img id="chG" alt="G"></div></div><div class="card mini"><div class="card-head"><span class="badge b-blue">B</span><span>Blue</span></div><div class="card-body"><img id="chB" alt="B"></div></div></div></div>
-            <div class="color-group"><h3 class="cg-title">HSV Channels</h3><div class="grid g3"><div class="card mini"><div class="card-head"><span class="badge b-orange">H</span><span>Hue</span></div><div class="card-body"><img id="chH" alt="H"></div></div><div class="card mini"><div class="card-head"><span class="badge b-cyan">S</span><span>Saturation</span></div><div class="card-body"><img id="chS" alt="S"></div></div><div class="card mini"><div class="card-head"><span class="badge b-gray">V</span><span>Value</span></div><div class="card-body"><img id="chV" alt="V"></div></div></div></div>
-            <div class="color-group"><h3 class="cg-title">LAB Channels</h3><div class="grid g3"><div class="card mini"><div class="card-head"><span class="badge b-purple">L</span><span>Lightness</span></div><div class="card-body"><img id="chL" alt="L"></div></div><div class="card mini"><div class="card-head"><span class="badge b-green">A</span><span>Green-Red</span></div><div class="card-body"><img id="chA" alt="A"></div></div><div class="card mini"><div class="card-head"><span class="badge b-blue">B</span><span>Blue-Yellow</span></div><div class="card-body"><img id="chBL" alt="B"></div></div></div></div>
+            <div class="sec-head">
+                <h2 class="sec-title">Color Space Decomposition</h2>
+                <p class="sec-sub">RGB, HSV, and LAB channel visualization from Lab 2</p>
+            </div>
+            <div class="color-group">
+                <h3 class="cg-title">RGB Channels</h3>
+                <div class="grid g3">
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-red">R</span><span>Red</span></div>
+                        <div class="card-body"><img id="chR" alt="R"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-green">G</span><span>Green</span></div>
+                        <div class="card-body"><img id="chG" alt="G"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-blue">B</span><span>Blue</span></div>
+                        <div class="card-body"><img id="chB" alt="B"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="color-group">
+                <h3 class="cg-title">HSV Channels</h3>
+                <div class="grid g3">
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-orange">H</span><span>Hue</span></div>
+                        <div class="card-body"><img id="chH" alt="H"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-cyan">S</span><span>Saturation</span></div>
+                        <div class="card-body"><img id="chS" alt="S"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-gray">V</span><span>Value</span></div>
+                        <div class="card-body"><img id="chV" alt="V"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="color-group">
+                <h3 class="cg-title">LAB Channels</h3>
+                <div class="grid g3">
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-purple">L</span><span>Lightness</span></div>
+                        <div class="card-body"><img id="chL" alt="L"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-green">A</span><span>Green-Red</span></div>
+                        <div class="card-body"><img id="chA" alt="A"></div>
+                    </div>
+                    <div class="card mini">
+                        <div class="card-head"><span class="badge b-blue">B</span><span>Blue-Yellow</span></div>
+                        <div class="card-body"><img id="chBL" alt="B"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Summary -->
     <section class="section hidden" id="summary">
-        <div class="sec-head"><span class="sec-tag">Final Display</span><h2 class="sec-title">Complete Summary</h2><p class="sec-sub">All processed images at a glance</p></div>
+        <div class="sec-head"><span class="sec-tag">Final Display</span>
+            <h2 class="sec-title">Complete Summary</h2>
+            <p class="sec-sub">All processed images at a glance</p>
+        </div>
         <div class="summary-grid" id="summaryGrid"></div>
-        <div class="center-btn"><button class="btn btn-glow btn-lg" id="btnAnother">↻ Process Another Image</button></div>
+        <div class="center-btn"><button class="btn btn-glow btn-lg" id="btnAnother">↻ Process Another Image</button>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer"><div class="footer-inner"><div><span class="brand-text">PixelForge<span class="brand-dot">.</span></span><p>CSE281 — Digital Image Processing Semester Project</p></div><div class="tech-tags"><span>Python</span><span>OpenCV</span><span>NumPy</span><span>Flask</span><span>JavaScript</span></div></div></footer>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div><span class="brand-text">PixelForge<span class="brand-dot">.</span></span>
+                <p>CSE281 — Digital Image Processing Semester Project</p>
+            </div>
+            <div class="tech-tags">
+                <span>Python</span><span>OpenCV</span><span>NumPy</span><span>Flask</span><span>JavaScript</span></div>
+        </div>
+    </footer>
 
     <!-- Loading -->
     <div class="loader hidden" id="loader">
         <div class="loader-inner">
-            <div class="spinner"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring-center">⚡</div></div>
+            <div class="spinner">
+                <div class="ring r1"></div>
+                <div class="ring r2"></div>
+                <div class="ring r3"></div>
+                <div class="ring-center">⚡</div>
+            </div>
             <h3>Processing Your Image</h3>
             <p class="loader-sub">Running 15+ processing operations...</p>
             <div class="loader-steps" id="loaderSteps">
@@ -197,7 +389,7 @@
     <!-- Particles.js Configuration -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             particlesJS("particles-js", {
                 "particles": {
                     "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
@@ -218,4 +410,5 @@
         });
     </script>
 </body>
+
 </html>
