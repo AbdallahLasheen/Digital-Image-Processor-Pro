@@ -13,10 +13,15 @@ import os, cv2, numpy as np, base64, io, zipfile, tempfile
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from flask_cors import CORS
 
-# C: drive is full, route temporary file uploads to a local tmp folder on D:
-tmp_folder = os.path.join(os.path.dirname(__file__), 'tmp')
-os.makedirs(tmp_folder, exist_ok=True)
-tempfile.tempdir = tmp_folder
+# C: drive is full locally, route temporary file uploads to a local tmp folder
+# Ignore if running on Vercel (which uses a read-only filesystem except for /tmp)
+try:
+    if not os.environ.get('VERCEL'):
+        tmp_folder = os.path.join(os.path.dirname(__file__), 'tmp')
+        os.makedirs(tmp_folder, exist_ok=True)
+        tempfile.tempdir = tmp_folder
+except Exception:
+    pass
 
 app = Flask(__name__, static_folder='static')
 CORS(app)
